@@ -2,7 +2,14 @@
   "name": "@restory/cli",
   "version": "0.0.1",
   "main": "index.js",
+  "description": "a cli tool",
   "license": "MIT",
+  "homepage": "https://github.com/Luefeng/react-cli.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luefeng/react-cli.git"
+  },
+  "author": "Luefeng",
   "bin": {
     "yyno": "bin/cli"
   },
