@@ -1,0 +1,15 @@
+{
+  "name": "learn-cli",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "yyno": "bin/cli"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "through2": "^3.0.1",
+    "vinyl-fs": "^3.0.3"
+  }
+}

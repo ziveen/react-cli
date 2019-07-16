@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+
+program
+    .usage('<command> [project]')
+    .description('create new file')
+    .option('-t --type',"what's your problem")
+    .action((project) => {
+        const opts = {
+            project
+        }
+        require('../lib/cli.js')(opts)
+    })
+
+
+program.version(require('../package.json').version)
+program.parse(process.argv)
