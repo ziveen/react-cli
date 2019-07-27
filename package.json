@@ -1,8 +1,8 @@
 {
   "name": "restory-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
-  "description": "a cli tool",
+  "description": "a tool to quickly create template of react storybook",
   "license": "MIT",
   "homepage": "https://github.com/Luefeng/react-cli.git",
   "repository": {
@@ -11,12 +11,13 @@
   },
   "author": "Luefeng",
   "bin": {
-    "yyno": "bin/cli"
+    "crs": "bin/cli",
+    "create-react-storybook": "bin/cli"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "commander": "^2.20.0",
-    "through2": "^3.0.1",
+    "cac": "^6.5.2",
+    "sao": "^1.6.1",
+    "stringify-object": "^3.3.0",
     "vinyl-fs": "^3.0.3"
   }
 }

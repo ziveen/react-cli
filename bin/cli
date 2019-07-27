@@ -1,18 +1,26 @@
 #!/usr/bin/env node
 
-const program = require('commander');
+const path = require('path');
+const cli = require('cac')();
 
-program
-    .usage('<command> [project]')
-    .description('create new file')
-    .option('-t --type',"what's your problem")
-    .action((project) => {
-        const opts = {
-            project
-        }
-        require('../lib/cli.js')(opts)
+cli
+    .command('<target-folder>', 'create a new project at this folder')
+    .option(
+        '--npm-client <client>',
+        `Choose an npm Client for installing packages ('yarn' | 'npm')`
+    )
+    .action(async (targetFolder, { npmClient }) => {
+        const sao = require('sao')
+
+        const app = sao({
+            generator: path.join(__dirname, '../generate/'),
+            outDir: targetFolder,
+            npmClient
+        })
+
+        await app.run().catch(sao.handleError)
     })
 
-
-program.version(require('../package.json').version)
-program.parse(process.argv)
+    cli.help()
+    cli.version(require('../package.json').version)
+    cli.parse()

@@ -1,0 +1,8 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "a typescript template of history",
+  "main": "index.js",
+  "author": "zhq1120",
+  "license": "MIT"
+}
