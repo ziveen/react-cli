@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "cac": "^6.5.2",
+    "global": "^4.4.0",
+    "restory-cli": "^0.0.3",
     "sao": "^1.6.1",
     "stringify-object": "^3.3.0",
     "vinyl-fs": "^3.0.3"
