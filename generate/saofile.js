@@ -38,5 +38,27 @@ module.exports = {
                 files: '**'
             }
         ]
+    },
+    async completed() {
+        this.gitInit()
+        await this.npmInstall()
+
+        this.showProjectTips()
+
+        const logCd = () => {
+        if (this.outDir !== process.cwd()) {
+            console.log(
+            `${this.chalk.bold('cd')} ${this.chalk.cyan(
+                path.relative(process.cwd(), this.outDir)
+            )}`
+            )
+        }
+        }
+
+        this.logger.tip(`To start run storybook, run following commands:`)
+        logCd()
+        console.log(
+        `${this.chalk.bold(this.npmClient)} ${this.chalk.cyan('run storybook')}`
+        )
     }
 }

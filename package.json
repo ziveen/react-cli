@@ -1,6 +1,6 @@
 {
   "name": "restory-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "description": "a tool to quickly create template of react storybook",
   "license": "MIT",
